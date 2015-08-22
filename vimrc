@@ -9,15 +9,15 @@ Bundle 'gmarik/vundle'
 
 " My Bundles
 Bundle 'tpope/vim-sensible'
-Bundle 'tpope/vim-surround'
-Bundle 'tpope/vim-fugitive'
+"Bundle 'tpope/vim-surround'
+"Bundle 'tpope/vim-fugitive'
 Bundle 'nanotech/jellybeans.vim'
 Bundle 'bling/vim-airline'
-Bundle 'scrooloose/syntastic'
-Bundle 'scrooloose/nerdtree'
-Bundle 'kien/ctrlp.vim'
-Bundle 'rking/ag.vim'
-Bundle 'slim-template/vim-slim'
+"Bundle 'scrooloose/syntastic'
+"Bundle 'scrooloose/nerdtree'
+"Bundle 'kien/ctrlp.vim'
+"Bundle 'rking/ag.vim'
+"Bundle 'slim-template/vim-slim'
 
 filetype plugin indent on
 
@@ -25,7 +25,9 @@ let mapleader=","
 
 color jellybeans
 
+" Highlight the current line
 set cursorline
+
 set expandtab
 set modelines=0
 set shiftwidth=2
@@ -112,4 +114,14 @@ set rtp+=/usr/local/Cellar/go/1.0.3/misc/vim
 " Quit with :Q
 command -nargs=0 Quit :qa!
 
+" airline
 let g:airline_powerline_fonts = 1
+
+" load the sensible.vim plugin. Anything after this will override sensible.vim
+runtime! plugin/sensible.vim
+
+" Set cursorline colors
+highlight CursorLine cterm=bold ctermbg=235
+
+" Set color of number column on cursorline
+highlight CursorLineNR ctermbg=235 ctermfg=white
