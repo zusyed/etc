@@ -121,7 +121,10 @@ let g:airline_powerline_fonts = 1
 runtime! plugin/sensible.vim
 
 " Set cursorline colors
-highlight CursorLine cterm=bold ctermbg=235
+highlight CursorLine ctermbg=235
 
 " Set color of number column on cursorline
 highlight CursorLineNR ctermbg=235 ctermfg=white
+
+" Set color of line numbers
+highlight LineNR ctermfg=white

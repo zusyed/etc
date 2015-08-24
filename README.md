@@ -10,4 +10,4 @@
 - mkdir ~/.fonts
 - cp powerline-fonts/UbuntuMono/Ubuntu* ~/.fonts
 - fc-cache -vf ~/.fonts
-- gsettings set org.gnome.desktop.interface monospace-font-name 'Ubuntu Mono derivative Powerline Bold Italic 12'
+- gsettings set org.gnome.desktop.interface monospace-font-name 'Ubuntu Mono derivative Powerline 12'
