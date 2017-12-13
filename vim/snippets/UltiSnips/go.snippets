@@ -1,0 +1,18 @@
+snippet inf "fblogging info"
+if glog.V(${1:2}) {
+	glog.Info(fblogging.Sprintf(ctx, "$2"))
+}
+$0
+endsnippet
+
+snippet infv "fblogging info with variable"
+if glog.V(${1:2}) {
+	glog.Info(fblogging.Sprintf(ctx, "${2: variable}: %+v", $2))
+}
+$0
+endsnippet
+
+snippet errf "fblogging error"
+glog.Error(fblogging.Sprintf(ctx, "Encountered an error ${1}: %s", err))
+$0
+endsnippet

@@ -1,0 +1,10 @@
+#!/bin/sh
+
+projdir=$GOPATH/src/flybits
+
+if [ -n "$1" ]
+then
+	projdir=$projdir/$1
+fi
+
+cd $projdir
